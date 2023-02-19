@@ -79,7 +79,6 @@
 
         $scope.login = function () {
             AuthService.login($scope.login.username, $scope.login.password).then(function (user) {
-                console.log(user);
                 $location.path("/");
             }, function (error) {
                 console.log(error);
@@ -167,7 +166,6 @@
                 .then(function (response) {
                     // If the request is successful, update the notes list on the client-side
                     $scope.notes = response.data;
-                    console.log($scope.notes)
                 }, function (error) {
                     // If there is an error, log it to the console
                     console.error(error);
