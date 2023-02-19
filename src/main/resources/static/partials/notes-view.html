@@ -3,8 +3,10 @@
         <div ng-include="'partials/list-notes.html'"></div>
     </section>
     <section class="note-panel">
-        <div ng-if="isEditCreateView" ng-include="'partials/create-edit-note.html'"></div>
-        <div ng-if="!isEditCreateView">
+        <div ng-if="selectedNote">
+            <div ng-include="'partials/create-edit-note.html'"></div>
+        </div>
+        <div ng-if="!selectedNote">
             No note selected
         </div>
     </section>
